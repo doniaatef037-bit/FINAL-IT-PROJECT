@@ -14,9 +14,9 @@ document.getElementById("loginForm").onsubmit = function(e) {
         let user = JSON.parse(storedData);
 
         if (user.pass === pass) {
-            localStorage.setItem("currentUser", email); // قوله إنك دخلتِ
+            localStorage.setItem("currentUser", email); 
             
-            // رسالة نجاح
+        
             let successBox = document.getElementById("successMsg");
             if(successBox) {
                 successBox.innerText = "Login successful! Redirecting...";
@@ -24,7 +24,7 @@ document.getElementById("loginForm").onsubmit = function(e) {
             }
 
             setTimeout(() => {
-                window.location.href = "profile.html"; // هنكتب هنا الHTMLبتاعت الـ Home
+                window.location.href = "profile.html"; // هنكتب هنا الHTMLبتاعت الـ Home joneer
             }, 1000);
         } else {
             document.getElementById("passError").style.display = "block";
