@@ -36,7 +36,7 @@ input, select {
     border: 1px solid #2d3e4a;
     border-radius: 8px;
     color: white;
-    box-sizing: border-box; /* الخاصية دي اللي بتمنع المربعات تترحل يمين أو شمال */
+    box-sizing: border-box;  
     outline: none;
 }
 
@@ -56,10 +56,10 @@ input, select {
     font-size: 12px;
     text-align: left;
     margin-bottom: 10px;
-    display: none; /* مخفي وهنظهره بالـ JS */
+    display: none; 
 }
 
-/* ستايل الجدول للبروفايل */
+
 table {
     width: 100%;
     margin-top: 20px;
