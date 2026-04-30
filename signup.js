@@ -1,7 +1,7 @@
 document.getElementById("signupForm").onsubmit = function(e) {
     e.preventDefault();
 
-    // إخفاء رسائل الخطأ القديمة
+
     document.querySelectorAll(".error-msg").forEach(el => el.style.display = "none");
 
     let fName = document.getElementById("fName").value;
@@ -9,7 +9,7 @@ document.getElementById("signupForm").onsubmit = function(e) {
     let pass = document.getElementById("pass").value;
     let isValid = true;
 
-    // 1. فحص هل الإيميل مسجل قبل كدة؟
+    
     if (localStorage.getItem(email)) {
         let emailError = document.getElementById("emailError");
         emailError.innerText = "This email is already registered!"; 
@@ -17,7 +17,7 @@ document.getElementById("signupForm").onsubmit = function(e) {
         return; 
     }
 
-    // 2. التاكد من البيانات (Validation)
+    
     if (fName.length < 3) {
         document.getElementById("fNameError").style.display = "block";
         isValid = false;
@@ -32,13 +32,13 @@ document.getElementById("signupForm").onsubmit = function(e) {
         isValid = false;
     }
 
-    // 3. لو كله تمام، سيف وروح للـ Home
+   
     if (isValid) {
         let user = { fName: fName, email: email, pass: pass };
-        localStorage.setItem(email, JSON.stringify(user)); // سيف بياناتك
-        localStorage.setItem("currentUser", email); // قوله إنك إنتِ اللي داخلة دلوقتي
+        localStorage.setItem(email, JSON.stringify(user)); 
+        localStorage.setItem("currentUser", email); 
 
-        // إظهار رسالة نجاح في الصفحة
+       
         let successBox = document.getElementById("successMsg");
         if(successBox) {
             successBox.innerText = "Welcome to CS Club!";
